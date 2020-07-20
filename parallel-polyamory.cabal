@@ -1,0 +1,49 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: a30ea79bfe65c484768342d6a617b6f73a46a19cfc7741d85db2664dc1aa454f
+
+name:           parallel-polyamory
+version:        1.0
+description:    Please see the README on GitHub at <https://github.com/islaterm/parallel-polyamory#readme>
+homepage:       https://github.com/islaterm/parallel-polyamory#readme
+bug-reports:    https://github.com/islaterm/parallel-polyamory/issues
+author:         Ignacio Slater
+maintainer:     ignacio.slater@ug.uchile.com
+copyright:      2020 Ignacio Slater
+license:        OtherLicense
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/islaterm/parallel-polyamory
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_parallel_polyamory
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable parallel-polyamory-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_parallel_polyamory
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , parallel-polyamory
+  default-language: Haskell2010
